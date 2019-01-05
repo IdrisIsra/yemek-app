@@ -20,6 +20,16 @@ class App extends Component {
     this.submitRating = this.submitRating.bind(this);
   }
 
+  onSubmitSignIn() {
+   fetch('http://localhost:3000/voted', {
+     method: 'post',
+     headers: {'Content-Type': 'application/json'},
+     body: JSON.stringify({
+       rating: this.state.rating
+     })
+   })
+ }
+
   onStarClick(nextValue, prevValue, name) {
     this.setState({rating: nextValue});
   }
@@ -51,7 +61,7 @@ class App extends Component {
               Please rate today's food!
             </p>
             <Stars value={rating} onClick={this.onStarClick}/>
-            <Button bsStyle="primary" bsSize="large" onClick={this.submitRating} className="voteButton">
+            <Button bsStyle="success" bsSize="large" onClick={this.submitRating} className="voteButton">
               Vote!
             </Button>
           </header>
