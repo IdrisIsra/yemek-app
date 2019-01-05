@@ -14,7 +14,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React idris
+            Learn React idrisv2
           </a>
         </header>
       </div>
