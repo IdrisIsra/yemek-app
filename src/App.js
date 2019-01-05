@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Stars from './Stars.js'
-
+import logo from './logov1.png'
 
 
 class App extends Component {
@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src="https://cdn.shopify.com/s/files/1/2202/6063/files/PNGMedium_4988d1ff-6d33-4d53-b552-c46c18ffc083_410x.png?v=1502258320" className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
           <a
             className="App-link"
             href="https://reactjs.org"
