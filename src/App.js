@@ -16,25 +16,24 @@ class App extends Component {
       rating: 1,
       voted: false
     };
-    this.onStarClick = this.onStarClick.bind(this);
-    this.submitRating = this.submitRating.bind(this);
-  }
-
-  onSubmitSignIn() {
-   fetch('http://localhost:3000/voted', {
-     method: 'post',
-     headers: {'Content-Type': 'application/json'},
-     body: JSON.stringify({
-       rating: this.state.rating
-     })
-   })
- }
-
-  onStarClick(nextValue, prevValue, name) {
-    this.setState({rating: nextValue});
+    this.onSubmitRating = this.onSubmitRating.bind(this);
   }
   submitRating() {
-    this.setState({voted: true})
+    this.setState({voted: true});
+  }
+  onSubmitRating() {
+    this.submitRating();
+    fetch('http://localhost:3000/', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        rating: this.state.rating
+      })
+    })
+ }
+
+  onStarClick = (nextValue, prevValue, name) => {
+    this.setState({rating: nextValue});
   }
   render() {
     const rating = this.state.rating;
@@ -58,10 +57,10 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Please rate today's lunch!
+              Please rate today's food!
             </p>
             <Stars value={rating} onClick={this.onStarClick}/>
-            <Button bsStyle="success" bsSize="large" onClick={this.submitRating} className="voteButton">
+            <Button bsStyle="success" bsSize="large" onClick={this.onSubmitRating} className="voteButton">
               Vote!
             </Button>
           </header>
