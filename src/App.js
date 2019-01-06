@@ -58,7 +58,7 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Please rate today's food!
+              Please rate today's lunch!
             </p>
             <Stars value={rating} onClick={this.onStarClick}/>
             <Button bsStyle="success" bsSize="large" onClick={this.submitRating} className="voteButton">
