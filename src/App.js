@@ -18,11 +18,9 @@ class App extends Component {
     };
     this.onSubmitRating = this.onSubmitRating.bind(this);
   }
-  submitRating() {
-    this.setState({voted: true});
-  }
+
   onSubmitRating() {
-    this.submitRating();
+    this.setState({voted: true});
     fetch('http://localhost:3000/', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
@@ -44,7 +42,7 @@ class App extends Component {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
-              Thanks for voting!
+              Thanks for voting! Orospu Evladı
             </p>
             <Stars value={rating} />
           </header>
