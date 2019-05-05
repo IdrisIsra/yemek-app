@@ -33,3 +33,18 @@
 .voteButton {
   width: 25vmin;
 }
+
+.adYaz {
+  margin-top: 1em;
+
+  font-size: 0.80em;
+}
+
+input[type=text] {
+   text-align: center;
+   color: silver;
+   background-color: black;
+   margin-bottom: 0.5em;
+   width: 8em
+
+}

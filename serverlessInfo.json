@@ -1,0 +1,20 @@
+
+
+{ 
+"Access Key Id": "AKIAYHORR76NB3P6QVVF",
+"Secret Access Key": "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",
+"User Pool ID": "us-east-2_rIQ4k1b1g",
+"User POol App Client ID": "qp86nicvc16b29o39pj450ofv",
+"Domain Name": "yemek-app",
+
+"Cognito Test Username": "d.usumezbas@gmail.com",
+"Cognito Test User Password": "Doruk1521!"
+}
+
+
+
+
+  aws cognito-idp admin-confirm-sign-up \
+  --region us-east-2 \
+  --user-pool-id us-east-2_rIQ4k1b1g \
+  --username d.usumezbas@gmail.com

@@ -5,7 +5,6 @@ class Stars extends Component {
   constructor(props) {
     super();
   }
-
   render() {
     const { value, onClick} = this.props
     return (
